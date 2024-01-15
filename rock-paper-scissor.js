@@ -9,6 +9,12 @@ function playRound(){
     let computerSelection  = getComputerChoice();
     let playerSelection = prompt("What is your move?").toLowerCase();
 
+    const legalChoices =["rock", "paper", "scissor"];
+    if (!legalChoices.includes(playerSelection)){
+        alert("Wrong selection, you have to choose rock, paper or scissor, try again")
+        return playRound()
+    }
+
     let winner = null;
 
     if (playerSelection == "rock"){
