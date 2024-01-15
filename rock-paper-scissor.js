@@ -40,11 +40,29 @@ function playRound(){
         alert(`Player won with ${playerSelection}!`);
     }
 
-
     return winner
-
-    console.log(playerSelection)
 }
 
-console.log(getComputerChoice());
-playRound();
+function game(){
+    let round_result = null
+    let playerWins, computerWins = 0
+    for (let i=0; i<5; i++){
+        console.log(i)
+       round_result = playRound();
+       if (round_result=="player"){
+            ++playerWins
+       } else {
+            ++computerWins
+       }
+    }
+
+    if (playerWins>computerWins){
+        alert(`Player won with ${playerWins} wins!`)
+    }   else{
+        alert(`Computer won with ${computerWins} wins!`)
+    }
+
+    
+}
+
+game()
