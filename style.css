@@ -1,0 +1,12 @@
+.buttons-div{
+    display: flex;
+    gap: 30px;
+}
+
+.playground{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
